@@ -40,7 +40,12 @@ public class Runigram {
 		// creates from the 3 colors a new Color object, and 
 		// makes pixel (i,j) refer to that object.
 		//// Replace the following statement with your code.
-		return null;
+		for (int i = 0; i < numRows; i++) {
+			for (int j = 0; j < numCols; j++) {
+                image[i][j] = new Color(in.readInt(), in.readInt(), in.readInt());
+            }
+        }
+		return image;
 	}
 
     // Prints the RGB values of a given color.
@@ -60,13 +65,15 @@ public class Runigram {
 	private static void print(Color[][] image) {
 		//// Replace this comment with your code
 		//// Notice that all you have to so is print every element (i,j) of the array using the print(Color) function.
-		
-		// for (int i = 0; i < image.length; i++) {
-		// 	for (int j = 0; j < image[i].length; j++) {
-        //         print(image[i][j]);
-        //     }
-        //     System.out.println();
-		// }
+		if (image == null) {
+			return;
+		}
+		for (int i = 0; i < image.length; i++) {
+			for (int j = 0; j < image[0].length; j++) {
+                print(image[i][j]);
+            }
+            System.out.println();
+		}
 	}
 	
 	/**
@@ -74,13 +81,13 @@ public class Runigram {
 	 */
 	public static Color[][] flippedHorizontally(Color[][] image) {
 		//// Replace the following statement with your code
-		// Color[][] flippedImageColors = new Color [image.length][image[0].length];
-		// for (int i = 0; i < image.length; i++) {
-        //     for (int j = 0; j < image[i].length; j++) {
-		// 		flippedImageColors[i][image[0].length -1 -j] = image[i][j];
-        //     }
-        // }
-		return null;
+		Color[][] flippedImageColors = new Color [image.length][image[0].length];
+		for (int i = 0; i < image.length; i++) {
+            for (int j = 0; j < image[i].length; j++) {
+				flippedImageColors[i][image[0].length -1 -j] = image[i][j];
+            }
+        }
+		return flippedImageColors;
 	}
 	
 	/**
