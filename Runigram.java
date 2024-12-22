@@ -109,7 +109,8 @@ public class Runigram {
 	// the three values r = lum, g = lum, b = lum.
 	private static Color luminance(Color pixel) {
 		//// Replace the following statement with your code
-		return null;
+		int lum = (int) (0.299 * pixel.getRed() + 0.587 * pixel.getGreen() + 0.114 * pixel.getBlue());
+		return new Color(lum, lum, lum);
 	}
 	
 	/**
@@ -117,7 +118,13 @@ public class Runigram {
 	 */
 	public static Color[][] grayScaled(Color[][] image) {
 		//// Replace the following statement with your code
-		return null;
+		Color[][] grayImageColors = new Color [image.length][image[0].length];
+		for (int i = 0; i < image.length; i++) {
+            for (int j =0;j < image[0].length; j++ ){
+				grayImageColors[i][j] = luminance(image[i][j]);
+			}
+        }
+		return grayImageColors;
 	}	
 	
 	/**
