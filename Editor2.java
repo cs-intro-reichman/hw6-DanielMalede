@@ -21,7 +21,7 @@ public class Editor2 {
 
 		Runigram.setCanvas(imageIn);
 		Runigram.display(imageIn);
-		// StdDraw.pause(3000);
+		StdDraw.pause(3000);
 
 		Runigram.setCanvas(imageOut);
 		Runigram.display(imageOut);
