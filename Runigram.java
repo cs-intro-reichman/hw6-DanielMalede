@@ -196,16 +196,16 @@ public class Runigram {
 	 */
 	public static void morph(Color[][] source, Color[][] target, int n) {
 		//// Replace this comment with your code
-		// if (source.length != target.length || source[0].length != target[0].length) {
-		// 	target = scaled(target, source[0].length, source.length);
-		// }
+		if (source.length != target.length || source[0].length != target[0].length) {
+			target = scaled(target, source[0].length, source.length);
+		}
 
-		// for (int i = 0; i <= n; i++) {
-		// 	double alpha = (double) (n - i) / n;
-		// 	Color[][] blended = blend(source, target, alpha);
-		// 	Runigram.display(blended);
-			// StdDraw.pause(300);
-		// }
+		for (int i = 0; i <= n; i++) {
+			double alpha = (double) (n - i) / n;
+			Color[][] blended = blend(source, target, alpha);
+			Runigram.display(blended);
+			StdDraw.pause(300);
+		}
 	
 	}
 
