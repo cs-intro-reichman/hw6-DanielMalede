@@ -61,12 +61,12 @@ public class Runigram {
 		//// Replace this comment with your code
 		//// Notice that all you have to so is print every element (i,j) of the array using the print(Color) function.
 		
-		for (int i = 0; i < image.length; i++) {
-			for (int j = 0; j < image[i].length; j++) {
-                print(image[i][j]);
-            }
-            System.out.println();
-		}
+		// for (int i = 0; i < image.length; i++) {
+		// 	for (int j = 0; j < image[i].length; j++) {
+        //         print(image[i][j]);
+        //     }
+        //     System.out.println();
+		// }
 	}
 	
 	/**
@@ -74,13 +74,13 @@ public class Runigram {
 	 */
 	public static Color[][] flippedHorizontally(Color[][] image) {
 		//// Replace the following statement with your code
-		Color[][] flippedImageColors = new Color [image.length][image[0].length];
-		for (int i = 0; i < image.length; i++) {
-            for (int j = 0; j < image[i].length; j++) {
-				flippedImageColors[i][image[0].length -1 -j] = image[i][j];
-            }
-        }
-		return flippedImageColors;
+		// Color[][] flippedImageColors = new Color [image.length][image[0].length];
+		// for (int i = 0; i < image.length; i++) {
+        //     for (int j = 0; j < image[i].length; j++) {
+		// 		flippedImageColors[i][image[0].length -1 -j] = image[i][j];
+        //     }
+        // }
+		return null;
 	}
 	
 	/**
