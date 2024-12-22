@@ -95,7 +95,13 @@ public class Runigram {
 	 */
 	public static Color[][] flippedVertically(Color[][] image){
 		//// Replace the following statement with your code
-		return null;
+		Color[][] flippedImageColors = new Color [image[0].length][image.length];
+        for (int i = 0; i < image[0].length; i++) {
+            for (int j = 0; j < image.length; j++) {
+                flippedImageColors[image[0].length -1 - i][j] = image[i][j];
+            }
+        }
+        return flippedImageColors;
 	}
 	
 	// Computes the luminance of the RGB values of the given pixel, using the formula 
